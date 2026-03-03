@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const habitSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  description: Number,
+  description: String,
   frequency: String,
   status: { type: String, default: "pending" }
 });
