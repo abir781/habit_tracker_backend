@@ -140,7 +140,7 @@ app.patch("/users/:id/complete", async (req, res) => {
   const id = req.params.id;
   const today = new Date().toISOString().split("T")[0];
 
-  const result = await Habit.updateOne(
+  const result = await User.updateOne(
     { _id: id },
     { $addToSet: { completedDates: today },
       $inc: { score: 5 }
